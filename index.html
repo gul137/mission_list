@@ -1,146 +1,155 @@
-<!DOCTYPE html>
-        <html lang="zh-CN">
-        <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>导出的关系图</title>
-        <style>
-        *{margin:0;padding:0;box-sizing:border-box;}
-        body{
-            font-family:'Segoe UI','PingFang SC','Microsoft YaHei','Helvetica Neue',sans-serif;
-            background:#e8eaef;
-            background-image:radial-gradient(circle,#d1d5db 1px,transparent 1px);
-            background-size:24px 24px;
-            min-height:100vh;
-            overflow:auto;
-        }
-        .static-canvas{
-            position:relative;
-            width:3600px;
-            height:2400px;
-            min-width:100vw;
-            min-height:100vh;
-        }
-        .static-svg{
-            position:absolute;
-            top:0;left:0;
-            width:100%;height:100%;
-            pointer-events:none;
-            z-index:1;
-        }
-        .static-textbox{
-            position:absolute;
-            min-width:180px;
-            min-height:100px;
-            background:#fff;
-            border-radius:10px;
-            box-shadow:0 4px 16px rgba(0,0,0,0.12);
-            z-index:10;
-            display:flex;
-            flex-direction:column;
-            border:2px solid transparent;
-        }
-        .static-header{
-            display:flex;
-            align-items:center;
-            gap:6px;
-            padding:8px 10px;
-            border-radius:10px 10px 0 0;
-            flex-shrink:0;
-            min-height:36px;
-            border-bottom:1px solid rgba(0,0,0,0.06);
-        }
-        .static-header .header-label{
-            flex:1;
-            font-size:0.8rem;
-            font-weight:600;
-            color:#fff;
-            letter-spacing:0.2px;
-            text-shadow:0 1px 2px rgba(0,0,0,0.2);
-            overflow:hidden;
-            text-overflow:ellipsis;
-            white-space:nowrap;
-        }
-        .static-content{
-            flex:1;
-            padding:10px 12px;
-            font-size:0.9rem;
-            color:#1f2937;
-            line-height:1.5;
-            min-height:50px;
-            border-radius:0 0 10px 10px;
-            word-break:break-word;
-            overflow-y:auto;
-            max-height:280px;
-        }
-        .static-content img{
-            max-width:100%;
-            height:auto;
-            border-radius:4px;
-            margin:4px 0;
-            display:block;
-        }
-    </style>
-</head>
-<body>
-    <div class="static-canvas">
-        <svg class="static-svg" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <marker id="arrowHead" markerWidth="10" markerHeight="8" refX="10" refY="4" orient="auto-start-reverse">
-                    <polygon points="0,0 10,4 0,8" fill="#556270"/>
-                </marker>
-                <filter id="shadowLine">
-                    <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#00000030"/>
-                </filter>
-            </defs>
-            <g><path d="M 1349 316 C 1349 376, 1350 312, 1350 372" stroke="#556270" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#arrowHead)" filter="url(#shadowLine)"/><path d="M 1350 612 C 1350 778.8984421736764, 984 505.10155782632364, 984 672" stroke="#556270" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#arrowHead)" filter="url(#shadowLine)"/><path d="M 1350 612 C 1350 792.7275297236146, 1750 467.27247027638543, 1750 648" stroke="#556270" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#arrowHead)" filter="url(#shadowLine)"/><path d="M 984 999 C 984 1059, 976 1044, 976 1104" stroke="#556270" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#arrowHead)" filter="url(#shadowLine)"/><path d="M 1350 612 C 1350 685.9808759072234, 1252 670.0191240927766, 1252 744" stroke="#556270" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#arrowHead)" filter="url(#shadowLine)"/><path d="M 1350 612 C 1350 705.4278464912898, 1487 674.5721535087102, 1487 768" stroke="#556270" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#arrowHead)" filter="url(#shadowLine)"/><path d="M 726 322 C 726 395.0068661154552, 706 409.9931338845448, 706 483" stroke="#556270" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#arrowHead)" filter="url(#shadowLine)"/></g></svg><div class="static-textbox" style="left:616px;top:182px;width:220px;min-height:140px;">
-            <div class="static-header" style="background:#ef4444;">
-                <span class="header-label">寻找纹燕</span>
-            </div>
-            <div class="static-content"><div><span style="font-size: 0.9rem;">我们的舰长，纹燕，在破浪号被击沉时选择了殉舰，留在了船上，不过，我们在当地渔民的公开通讯似乎听到了有关她的消息，她应该没有死在船上。</span></div></div>
-        </div><div class="static-textbox" style="left:871px;top:76px;width:220px;min-height:240px;">
-            <div class="static-header" style="background:#4f86f7;">
-                <span class="header-label">背景</span>
-            </div>
-            <div class="static-content"><span style="font-size: 14.4px;">破浪号训练舰圆满完成了在金湾列岛的系列任务，但刚刚离港，</span><div style="font-size: 14.4px;">曾经还与我们龙盟合作的政府军袭击了我们，击沉了破浪号</div><div style="font-size: 14.4px;"><br></div><div><br></div><div><br></div></div>
-        </div><div class="static-textbox" style="left:1239px;top:98px;width:220px;min-height:218px;">
-            <div class="static-header" style="background:#4f86f7;">
-                <span class="header-label">认清现状</span>
-            </div>
-            <div class="static-content">我们现在靠着救生艇来到了岸边，面对金湾列岛上的混乱局势，游击队和政府军打成一片，其中还有乘火打劫的各路土匪，在之前的任务中，我们发现了我们的死对头——星联人也似乎参与进来了</div>
-        </div><div class="static-textbox" style="left:1240px;top:372px;width:220px;min-height:240px;">
-            <div class="static-header" style="background:#4f86f7;">
-                <span class="header-label">取得联系</span>
-            </div>
-            <div class="static-content">在撤离的混乱中，我们将信号发射机弄丢了，司令部得到的有关我们的最后信息是我们遇袭时发出的，现在，当务之急是收拾一下我们的破烂，与司令部取得联系，争取援助<div>任务目标，在附近的通讯塔上以101频率呼叫司令部</div><div>（已完成）</div></div>
-        </div><div class="static-textbox" style="left:874px;top:672px;width:220px;min-height:327px;">
-            <div class="static-header" style="background:#4f86f7;">
-                <span class="header-label">游击队？同志？</span>
-            </div>
-            <div class="static-content"><div>虽然我们联系上了司令部，但是来接我们的竟然是游击队，不过他们对我们不错，还给了我们安身的地方，既然政府军贸然袭击了我们，那我们和游击队的弟兄们也能算是一条战线上”战友“了吧，和他们并肩作战，给他们证明一下我们的能力吧</div><div>任务:上交20个在战局中找到的急救箱</div><div>上交三把在战局中找到的任意AK</div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div></div>
-        </div><div class="static-textbox" style="left:1640px;top:648px;width:220px;min-height:327px;">
-            <div class="static-header" style="background:#4f86f7;">
-                <span class="header-label">补给网络</span>
-            </div>
-            <div class="static-content">我们成功取得了与司令部的联系，但我们接到的第一个命令居然是就地加入特种作战司令部，重新整理装备，看样子我们要在岛上呆一段时间了。<div>任务：前往023-158取得停在那里的”武装大飞“然后前往050161附近处寻找补给箱<br><div>奖励：之后的任务可以使用完整军械库（除了大疆和迫击炮）</div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div></div></div>
-        </div><div class="static-textbox" style="left:866px;top:1104px;width:220px;min-height:140px;">
-            <div class="static-header" style="background:#4f86f7;">
-                <span class="header-label">地狱之城</span>
-            </div>
-            <div class="static-content"><br></div>
-        </div><div class="static-textbox" style="left:1142px;top:744px;width:220px;min-height:140px;">
-            <div class="static-header" style="background:#4f86f7;">
-                <span class="header-label">后勤业务</span>
-            </div>
-            <div class="static-content">给游击队前出侦察,放哨的弟兄们送饭（在地图上任意一个侦察标志附近找到我方狙击手</div>
-        </div><div class="static-textbox" style="left:1377px;top:768px;width:220px;min-height:140px;">
-            <div class="static-header" style="background:#4f86f7;">
-                <span class="header-label">老贝榨1</span>
-            </div>
-            <div class="static-content"><span style="font-size: 14.4px;">据游击队侦察人员汇报近日，政府军在</span><span style="font-size: 14.4px;">CATALINA城中的部署增强了，并伴随有不明支援保障设备进入</span><div>我们肯定不能让对面这么舒服<br><div><span style="font-size: 14.4px;">任务：打击CATALINA城中的油罐（建议远程，非接触的解决问题，不然等着被剁成臊子吧）</span><div><br></div></div></div></div>
-        </div><div class="static-textbox" style="left:596px;top:483px;width:220px;min-height:261px;">
-            <div class="static-header" style="background:#ef4444;">
-                <span class="header-label">民间情报1</span>
-            </div>
-            <div class="static-content">在与游击队交谈的时候，游击队员透露一名曾经见过纹燕，但因为负伤回了家的游击队员在他BRICENO村中看到了纹燕，据描述，纹燕醒来后，拒绝了村民的收留的邀请，不顾周围雷场和劫匪等危险独自匆忙离开了，<div><br></div></div>
-        </div></div></body></html>
+{
+  "nodes": [
+    {
+      "id": 4,
+      "left": 616,
+      "top": 182,
+      "width": 220,
+      "height": 140,
+      "color": "#ef4444",
+      "contentHTML": "<div><span style=\"font-size: 0.9rem;\">我们的舰长，纹燕，在破浪号被击沉时选择了殉舰，留在了船上，不过，我们在当地渔民的公开通讯似乎听到了有关她的消息，她应该没有死在船上。</span></div>",
+      "headerLabel": "寻找纹燕"
+    },
+    {
+      "id": 7,
+      "left": 871,
+      "top": 76,
+      "width": 220,
+      "height": 240,
+      "color": "#4f86f7",
+      "contentHTML": "<span style=\"font-size: 14.4px;\">破浪号训练舰圆满完成了在金湾列岛的系列任务，但刚刚离港，</span><div style=\"font-size: 14.4px;\">曾经还与我们龙盟合作的政府军袭击了我们，击沉了破浪号</div><div style=\"font-size: 14.4px;\"><br></div><div><br></div><div><br></div>",
+      "headerLabel": "背景"
+    },
+    {
+      "id": 10,
+      "left": 1239,
+      "top": 98,
+      "width": 220,
+      "height": 218,
+      "color": "#4f86f7",
+      "contentHTML": "我们现在靠着救生艇来到了岸边，面对金湾列岛上的混乱局势，游击队和政府军打成一片，其中还有乘火打劫的各路土匪，在之前的任务中，我们发现了我们的死对头——星联人也似乎参与进来了",
+      "headerLabel": "认清现状"
+    },
+    {
+      "id": 11,
+      "left": 1240,
+      "top": 372,
+      "width": 220,
+      "height": 240,
+      "color": "#4f86f7",
+      "contentHTML": "在撤离的混乱中，我们将信号发射机弄丢了，司令部得到的有关我们的最后信息是我们遇袭时发出的，现在，当务之急是收拾一下我们的破烂，与司令部取得联系，争取援助<div>任务目标，在附近的通讯塔上以101频率呼叫司令部</div><div>（已完成）</div>",
+      "headerLabel": "取得联系"
+    },
+    {
+      "id": 12,
+      "left": 874,
+      "top": 672,
+      "width": 220,
+      "height": 327,
+      "color": "#4f86f7",
+      "contentHTML": "<div>虽然我们联系上了司令部，但是来接我们的竟然是游击队，不过他们对我们不错，还给了我们安身的地方，既然政府军贸然袭击了我们，那我们和游击队的弟兄们也能算是一条战线上”战友“了吧，和他们并肩作战，给他们证明一下我们的能力吧</div><div>任务:上交20个在战局中找到的急救箱</div><div>上交三把在战局中找到的任意AK</div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div>",
+      "headerLabel": "游击队？同志？"
+    },
+    {
+      "id": 13,
+      "left": 1640,
+      "top": 648,
+      "width": 220,
+      "height": 327,
+      "color": "#4f86f7",
+      "contentHTML": "我们成功取得了与司令部的联系，但我们接到的第一个命令居然是就地加入特种作战司令部，重新整理装备，看样子我们要在岛上呆一段时间了。<div>任务：前往023-158取得停在那里的”武装大飞“然后前往050161附近处寻找补给箱<br><div>奖励：之后的任务可以使用完整军械库（除了大疆和迫击炮）</div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div></div>",
+      "headerLabel": "补给网络"
+    },
+    {
+      "id": 15,
+      "left": 866,
+      "top": 1104,
+      "width": 220,
+      "height": 140,
+      "color": "#4f86f7",
+      "contentHTML": "<br>",
+      "headerLabel": "地狱之城"
+    },
+    {
+      "id": 19,
+      "left": 596,
+      "top": 483,
+      "width": 220,
+      "height": 261,
+      "color": "#ef4444",
+      "contentHTML": "在与游击队交谈的时候，游击队员透露一名曾经见过纹燕，但因为负伤回了家的游击队员在他BRICENO村中看到了纹燕，据描述，纹燕醒来后，拒绝了村民的收留的邀请，不顾周围雷场和劫匪等危险独自匆忙离开了，<div><br></div>",
+      "headerLabel": "民间情报1"
+    },
+    {
+      "id": 20,
+      "left": 1143,
+      "top": 756,
+      "width": 220,
+      "height": 305,
+      "color": "#4f86f7",
+      "contentHTML": "我们在东北角上的机场上曾经部署过维和部队，在撤离时肯定留下了一些重装备，现在机场被政府军占领了，也许，我们可以尝试回收这些装备，<span style=\"font-size: 0.9rem;\">先去看看还剩下了点什么吧</span><div>任务:对东北角的机场进行侦察，汇报兵力部署和重装备情况（在任务完成后以文字形式发在群里或私信@纹燕）<br><div><br></div></div>",
+      "headerLabel": "二手回收"
+    },
+    {
+      "id": 21,
+      "left": 1398,
+      "top": 792,
+      "width": 220,
+      "height": 327,
+      "color": "#4f86f7",
+      "contentHTML": "<div><span style=\"font-size: 14.4px;\">据游击队侦察人员汇报近日，政府军在</span><span style=\"font-size: 14.4px;\">CATALINA城中的部署增强了，并伴随有不明支援保障设备进入</span><div style=\"font-size: 14.4px;\">我们肯定不能让对面这么舒服<br><div><span style=\"font-size: 14.4px;\">任务：打击CATALINA城中的油罐（建议远程，非接触的解决问题，不然等着被剁成臊子吧）</span></div></div></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div>",
+      "headerLabel": "老贝榨1"
+    }
+  ],
+  "connections": [
+    {
+      "id": 5,
+      "fromNodeId": 10,
+      "fromAnchor": "bottom",
+      "toNodeId": 11,
+      "toAnchor": "top"
+    },
+    {
+      "id": 6,
+      "fromNodeId": 11,
+      "fromAnchor": "bottom",
+      "toNodeId": 12,
+      "toAnchor": "top"
+    },
+    {
+      "id": 7,
+      "fromNodeId": 11,
+      "fromAnchor": "bottom",
+      "toNodeId": 13,
+      "toAnchor": "top"
+    },
+    {
+      "id": 8,
+      "fromNodeId": 12,
+      "fromAnchor": "bottom",
+      "toNodeId": 15,
+      "toAnchor": "top"
+    },
+    {
+      "id": 13,
+      "fromNodeId": 4,
+      "fromAnchor": "bottom",
+      "toNodeId": 19,
+      "toAnchor": "top"
+    },
+    {
+      "id": 14,
+      "fromNodeId": 11,
+      "fromAnchor": "bottom",
+      "toNodeId": 20,
+      "toAnchor": "top"
+    },
+    {
+      "id": 15,
+      "fromNodeId": 11,
+      "fromAnchor": "bottom",
+      "toNodeId": 21,
+      "toAnchor": "top"
+    }
+  ]
+}
